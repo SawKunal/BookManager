@@ -1,0 +1,15 @@
+# Add a book
+curl -X POST http://localhost:3000/api/books \
+    -H "Content-Type: application/json" \
+    -d '{"title":"1984","author":"George Orwell","publishedYear":1949}'
+
+# Get all books
+curl http://localhost:3000/api/books
+
+# Update a book (replace :id with real ID)
+curl -X PUT http://localhost:3000/api/books/<BOOK_ID> \
+    -H "Content-Type: application/json" \
+    -d '{"title":"Updated Title"}'
+
+# Delete a book
+curl -X DELETE http://localhost:3000/api/books/<BOOK_ID>

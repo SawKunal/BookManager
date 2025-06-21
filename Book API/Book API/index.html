@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>📚 Book Manager</title>
+<style>
+    * {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
+    margin: 0;
+    padding: 0;
+    }
+
+    .container {
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    }
+
+    h1, h2 {
+    text-align: center;
+    color: #1976d2;
+    margin-bottom: 30px;
+    }
+
+    form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    }
+
+    button {
+    padding: 12px;
+    background-color: #1976d2;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+
+    button:hover {
+    background-color: #1565c0;
+    }
+
+    ul {
+    list-style: none;
+    padding-left: 0;
+    }
+
+    li {
+    background: #f1f8ff;
+    margin-bottom: 15px;
+    padding: 16px;
+    border-left: 6px solid #2196f3;
+    border-radius: 8px;
+    position: relative;
+    }
+
+    li strong {
+    font-size: 1.2rem;
+    color: #0d47a1;
+    }
+
+    .delete-btn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background-color: #e53935;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    }
+
+    .delete-btn:hover {
+    background-color: #c62828;
+    }
+</style>
+</head>
+<body>
+
+<!-- Book Manager Section -->
+<div class="container">
+    <h1>📚 Book Manager</h1>
+    <form id="bookForm">
+    <input id="title" type="text" placeholder="Title" required />
+    <input id="author" type="text" placeholder="Author" required />
+    <input id="year" type="number" placeholder="Year" min="0" required />
+    <button type="submit">➕ Add Book</button>
+    </form>
+    <ul id="bookList"></ul>
+</div>
+
+<script>
+    // BOOK MANAGER SCRIPT
+    const BOOK_API = '/api/books';
+    const bookForm = document.getElementById('bookForm');
+    const bookList = document.getElementById('bookList');
+
+    async function fetchBooks() {
+    const res = await fetch(BOOK_API);
+    const books = await res.json();
+    bookList.innerHTML = '';
+    books.forEach(book => {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${book.title}</strong> by ${book.author} (${book.publishedYear})`;
+        bookList.appendChild(li);
+    });
+    }
+
+    bookForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const book = {
+        title: document.getElementById('title').value,
+        author: document.getElementById('author').value,
+        publishedYear: parseInt(document.getElementById('year').value)
+    };
+    await fetch(BOOK_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(book)
+    });
+    bookForm.reset();
+    fetchBooks();
+    });
+
+    fetchBooks();
+</script>
+</body>
+</html>
