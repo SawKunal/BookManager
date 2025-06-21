@@ -1,24 +1,34 @@
-# BookManager
-📚 Book Manager – Personal Library API
-Book Manager is a simple and efficient API-based application to help users manage their personal library. Built using Node.js, Express, and MongoDB, this app allows users to add, update, view, and delete books with details like title, author, and publication year.
+# 📚 BookManager – Personal Library API
 
-🚀 Features
-  📌 Add new books with title, author, and published year
-  📖 View all stored books
-  ✏️ Update book details
-  ❌ Delete a book
-  🌐 Optional frontend interface (HTML + JS + CSS)
-  🧠 MongoDB Atlas or local MongoDB integration for real-time data persistence
+**Book Manager** is a simple and efficient API-based application to help users manage their personal library. Built using **Node.js**, **Express**, and **MongoDB**, this app allows users to add, update, view, and delete books with details like title, author, and publication year.
 
-🛠️ Technologies Used
-  Node.js + Express
-  MongoDB Atlas or Local MongoDB
-  Mongoose (ODM)
-  HTML, CSS, JavaScript (Frontend - optional)
-  cURL / Postman for API Testing
+---
 
-📘 API Documentation
-Base URL:
+## 🚀 Features
+
+- 📌 Add new books with title, author, and published year  
+- 📖 View all stored books  
+- ✏️ Update book details  
+- ❌ Delete a book  
+- 🌐 Optional frontend interface (HTML + JS + CSS)  
+- 🧠 MongoDB Atlas or local MongoDB integration for real-time data persistence  
+
+---
+
+## 🛠️ Technologies Used
+
+- Node.js + Express  
+- MongoDB Atlas or Local MongoDB  
+- Mongoose (ODM)  
+- HTML, CSS, JavaScript (Frontend - optional)  
+- cURL / Postman for API Testing  
+
+---
+
+## 📘 API Documentation
+
+### Base URL
+
 http://localhost:3000/api/books
 
 1. 🟢 Create a New Book
