@@ -94,13 +94,14 @@ json
 
 ## 📂 Folder Structure
 book-manager/
--├── models/
--│   └── Book.js          # Mongoose schema
--├── public/
--│   └── index.html       # Optional frontend
--├── server.js            # Express server
--├── package.json
--└── README.md
+├── models/
+│   └── Book.js          # Mongoose schema
+├── public/
+│   └── index.html       # Optional frontend
+├── server.js            # Express server
+├── package.json         # Project metadata and dependencies
+└── README.md            # Project documentation
+
 
 
 ## 💻 Running the App Locally
