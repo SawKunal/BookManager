@@ -92,15 +92,15 @@ json
     "message": "Book deleted successfully"
   }
 
-📂 Folder Structure
+## 📂 Folder Structure
 book-manager/
-├── models/
-│   └── Book.js          # Mongoose schema
-├── public/
-│   └── index.html       # Optional frontend
-├── server.js            # Express server
-├── package.json
-└── README.md
+-├── models/
+-│   └── Book.js          # Mongoose schema
+-├── public/
+-│   └── index.html       # Optional frontend
+-├── server.js            # Express server
+-├── package.json
+-└── README.md
 
 
 ## 💻 Running the App Locally
@@ -117,32 +117,32 @@ node server.js
 Visit:
 http://localhost:3000
 
-🔁 Sample curl Commands
+## 🔁 Sample curl Commands
 bash
-# Create a new book
+### Create a new book
 curl -X POST http://localhost:3000/api/books \
 -H "Content-Type: application/json" \
 -d '{"title":"Atomic Habits","author":"James Clear","publishedYear":2018}'
-# Get all books
+### Get all books
 curl http://localhost:3000/api/books
-# Update a book
+### Update a book
 curl -X PUT http://localhost:3000/api/books/<BOOK_ID> \
 -H "Content-Type: application/json" \
 -d '{"publishedYear":2020}'
-# Delete a book
+### Delete a book
 curl -X DELETE http://localhost:3000/api/books/<BOOK_ID>
 
-👨‍💻 Author
-Kunal Kumar Saw
-🔗 GitHub/SawKunal
-📧 sawkunal556@gmail.com
+## 👨‍💻 Author
+-Kunal Kumar Saw
+-🔗 GitHub/SawKunal
+-📧 sawkunal556@gmail.com
 
-📜 License
+## 📜 License
 This project is licensed under the MIT License.
 
-✨ Future Improvements
-   ✅ Add user authentication
-   🔍 Book search/filtering
-   📚 Categories or tags for books
-  🧾 Export book list as PDF/CSV
+## ✨ Future Improvements
+   -✅ Add user authentication
+   -🔍 Book search/filtering
+   -📚 Categories or tags for books
+   -🧾 Export book list as PDF/CSV
 
