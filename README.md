@@ -31,7 +31,7 @@
 
 http://localhost:3000/api/books
 
-1. 🟢 Create a New Book
+#### 1. 🟢 Create a New Book
 Endpoint: POST /api/books
 Description: Adds a new book to the database.
 Headers: Content-Type: application/json
@@ -51,7 +51,7 @@ Response:
     "publishedYear": 2018
   }
 
-2. 🔵 Get All Books
+#### 2. 🔵 Get All Books
 Endpoint: GET /api/books
 Description: Fetches all stored books.
 
@@ -65,7 +65,7 @@ Response:
 
 
 
-3. 🟡 Update a Book
+#### 3. 🟡 Update a Book
 Endpoint: PUT /api/books/:id
 Description: Updates the book details (title, author, or year).
 
@@ -82,7 +82,7 @@ Response:
     "publishedYear": 2020
   }
 
-4. 🔴 Delete a Book
+#### 4. 🔴 Delete a Book
 Endpoint: DELETE /api/books/:id
 Description: Deletes a book by ID.
 
