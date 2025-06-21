@@ -94,13 +94,13 @@ json
 
 ## 📂 Folder Structure
 book-manager/
-├── models/
-│   └── Book.js          # Mongoose schema
-├── public/
-│   └── index.html       # Optional frontend
-├── server.js            # Express server
-├── package.json         # Project metadata and dependencies
-└── README.md            # Project documentation
+- ├── models/
+- │   └── Book.js          # Mongoose schema
+- ├── public/
+- │   └── index.html       # Optional frontend
+- ├── server.js            # Express server
+- ├── package.json         # Project metadata and dependencies
+- └── README.md            # Project documentation
 
 
 
@@ -114,7 +114,6 @@ npm install
 Make sure MongoDB is running locally or use MongoDB Atlas connection string in mongoose.connect().
 4. Run the Server
 node server.js
-
 Visit:
 http://localhost:3000
 
@@ -134,16 +133,16 @@ curl -X PUT http://localhost:3000/api/books/<BOOK_ID> \
 curl -X DELETE http://localhost:3000/api/books/<BOOK_ID>
 
 ## 👨‍💻 Author
--Kunal Kumar Saw
--🔗 GitHub/SawKunal
--📧 sawkunal556@gmail.com
+- Kunal Kumar Saw
+- 🔗 GitHub/SawKunal
+- 📧 sawkunal556@gmail.com
 
 ## 📜 License
 This project is licensed under the MIT License.
 
 ## ✨ Future Improvements
-   -✅ Add user authentication
-   -🔍 Book search/filtering
-   -📚 Categories or tags for books
-   -🧾 Export book list as PDF/CSV
+- ✅ Add user authentication
+- 🔍 Book search/filtering
+- 📚 Categories or tags for books
+- 🧾 Export book list as PDF/CSV
 
