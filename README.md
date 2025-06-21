@@ -103,7 +103,7 @@ book-manager/
 └── README.md
 
 
-💻 Running the App Locally
+## 💻 Running the App Locally
 1. Clone the Repository
 git clone https://github.com/yourusername/book-manager.git
 cd book-manager
