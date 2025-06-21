@@ -83,7 +83,6 @@ json
   }
 
 📂 Folder Structure
-pgsql
 book-manager/
 ├── models/
 │   └── Book.js          # Mongoose schema
@@ -92,6 +91,7 @@ book-manager/
 ├── server.js            # Express server
 ├── package.json
 └── README.md
+
 
 💻 Running the App Locally
 1. Clone the Repository
